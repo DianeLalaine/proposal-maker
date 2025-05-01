@@ -14,9 +14,9 @@ const ProposalPreview = ({
   notedByTitle,
   notedByEmail,
   typeOfSubscription = "PRIISMS Online Subscription",
-  specs,
-  ratePerStudent,
-  otc,
+  specs = '',
+  ratePerStudent = 0,
+  otc = 0,
   vat = 0.12,
 }) => {
   const totalCost = otc + otc * vat;

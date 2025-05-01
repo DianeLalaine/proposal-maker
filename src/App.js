@@ -12,7 +12,7 @@ import './styles/main.css';
 const App = () => {
   const [activeTab, setActiveTab] = useState('template');
 
-  // === Global Details State (shared between form and preview) ===
+  // Shared state between input pages and preview
   const [details, setDetails] = useState({
     refNumber: '',
     dateIssued: '',
@@ -24,17 +24,28 @@ const App = () => {
     preparedByEmail: '',
     notedByName: '',
     notedByTitle: '',
-    notedByEmail: ''
+    notedByEmail: '',
+    typeOfSubscription: 'PRIISMS Online Subscription',
+    specs: '',
+    ratePerStudent: 0,
+    otc: 0,
+    vat: 0.12,
+    multiCampus: 'No',
+    reseller: 'No'
   });
 
-  // === Conditional Tab Rendering ===
   const renderTab = () => {
     switch (activeTab) {
-      case 'details': return <DetailsPage details={details} setDetails={setDetails} />;
-      case 'services': return <ServicesPage />;
-      case 'terms': return <TermsPage />;
-      case 'customize': return <CustomizePage />;
-      default: return <TemplatePage />;
+      case 'details':
+        return <DetailsPage details={details} setDetails={setDetails} />;
+      case 'services':
+        return <ServicesPage details={details} setDetails={setDetails} />;
+      case 'terms':
+        return <TermsPage />;
+      case 'customize':
+        return <CustomizePage />;
+      default:
+        return <TemplatePage />;
     }
   };
 
@@ -44,7 +55,9 @@ const App = () => {
       <div className="content">
         <Header />
         <div className="main-content">
-          <div className="editor">{renderTab()}</div>
+          <div className="editor">
+            {renderTab()}
+          </div>
           <ProposalPreview {...details} />
         </div>
       </div>

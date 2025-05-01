@@ -13,13 +13,19 @@ const ProposalPreview = ({
   notedByName,
   notedByTitle,
   notedByEmail,
-  typeOfSubscription = "PRIISMS Online Subscription"
+  typeOfSubscription = "PRIISMS Online Subscription",
+  specs,
+  ratePerStudent,
+  otc,
+  vat = 0.12,
 }) => {
+  const totalCost = otc + otc * vat;
+
   return (
     <div className="preview">
       <div className="preview-content">
         <div className="proposal-wrapper">
-          
+
           {/* === PAGE 1 === */}
           <div className="proposal-a4 page-break">
             <div className="background-image"></div>
@@ -61,68 +67,106 @@ const ProposalPreview = ({
             </div>
           </div>
 
- {/* === PAGE 2 === */}
-<div className="proposal-a4 page-break">
-  <div className="background-image"></div>
-  <div className="page-content">
-    <div className="body-content">
-      <p style={{ marginTop: '40px' }}>
-        Our company’s track record is proven in the industry and we look forward to serve you with your requirement. Kindly call our hotline numbers or send us an email on the below contact details for further information.
-      </p>
+          {/* === PAGE 2 === */}
+          <div className="proposal-a4 page-break">
+            <div className="background-image"></div>
+            <div className="page-content">
+              <div className="body-content">
+                <p style={{ marginTop: '40px' }}>
+                  Our company’s track record is proven in the industry and we look forward to serve you with your requirement. Kindly call our hotline numbers or send us an email on the below contact details for further information.
+                </p>
 
-      <p style={{ marginTop: '50px' }}><strong>Yours Sincerely,</strong></p>
+                <p style={{ marginTop: '50px' }}><strong>Yours Sincerely,</strong></p>
 
-      <div style={{ marginBottom: '40px' }}>
-        <p><strong>Prepared By:</strong></p>
-        <p>{preparedByName}<br />{preparedByTitle}<br />{preparedByEmail}</p>
-      </div>
+                <div style={{ marginBottom: '40px' }}>
+                  <p><strong>Prepared By:</strong></p>
+                  <p>{preparedByName}<br />{preparedByTitle}<br />{preparedByEmail}</p>
+                </div>
 
-      <div style={{ marginBottom: '100px' }}>
-        <p><strong>Noted By:</strong></p>
-        <p>{notedByName}<br />{notedByTitle}<br />{notedByEmail}</p>
-      </div>
+                <div style={{ marginBottom: '100px' }}>
+                  <p><strong>Noted By:</strong></p>
+                  <p>{notedByName}<br />{notedByTitle}<br />{notedByEmail}</p>
+                </div>
 
-      <p style={{ fontWeight: 'bold', fontStyle: 'italic' }}>
-        system generated – no need for signature
-      </p>
-    </div>
-  </div>
-</div>
-
+                <p style={{ fontWeight: 'bold', fontStyle: 'italic' }}>
+                  system generated – no need for signature
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* === PAGE 3 === */}
           <div className="proposal-a4">
             <div className="background-image"></div>
             <div className="page-content">
               <h3>I. COSTING</h3>
-              <p><strong>PRIISMS Online Subscription:</strong> ₱232.41 / student</p>
-              <p><strong>One-time setup cost:</strong> ₱350,000 + 12% VAT = ₱448,000.00</p>
+              <table className="costing-table">
+                <thead>
+                  <tr>
+                    <th colSpan="2">{typeOfSubscription}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>SERVER SPECS</strong></td>
+                    <td><strong>RATE PER STUDENT</strong></td>
+                  </tr>
+                  <tr>
+                    <td>{specs}</td>
+                    <td>₱{ratePerStudent.toLocaleString(undefined, { minimumFractionDigits: 2 })}</td>
+                  </tr>
+                  <tr>
+                    <td><strong>ONE TIME COST</strong></td>
+                    <td>₱{otc.toLocaleString(undefined, { minimumFractionDigits: 2 })}</td>
+                  </tr>
+                  <tr>
+                    <td><strong>VAT</strong></td>
+                    <td>{(vat * 100).toFixed(0)}%</td>
+                  </tr>
+                  <tr>
+                    <td><strong>TOTAL</strong></td>
+                    <td><strong>₱{totalCost.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></td>
+                  </tr>
+                </tbody>
+              </table>
 
-              <h3>III. TERMS OF PAYMENT</h3>
+              <p className="note">Note: Customizable in accordance to school policy & preference.</p>
+
+              <h3>II. TERMS OF PAYMENT</h3>
+              <p>SOFTWARE AS A SERVICE (SUBSCRIPTION)</p>
               <ul>
-                <li>Initial payment of one-time cost</li>
-                <li>Monthly billing based on enrolled students</li>
+                <li>Pay the initial payment (One Time Cost/s)</li>
+                <li>Payment of Subscription Fee (Actual number of enrolled students)</li>
+                <li>Billing and payment Monthly</li>
               </ul>
 
-              <h3>IV. DELIVERY</h3>
-              <p>30–60 days from sign-up and payment confirmation</p>
+              <h3>III. DELIVERY</h3>
+              <p>30 TO 60 DAYS upon sign up of this agreement and proof of payment of Total Initial Payment.</p>
 
-              <h3>V. WARRANTY</h3>
+              <h3>IV. WARRANTY</h3>
               <ul>
-                <li>3-year lock-in period with automatic renewal</li>
-                <li>Lifetime bug fixes and software updates</li>
-                <li>99.9% guaranteed cloud uptime</li>
+                <li>Three (3) years lock in period with Automatic Renewal contract for SaaS (Subscription)</li>
+                <li>Standard Service Warranty and After Sales Support within the contract term.</li>
+                <li>Lifetime warranty on bugs and fixes after installation of software components</li>
+                <li>99.9% uptime on cloud services</li>
               </ul>
 
-              <h3>VI. PRICE VALIDITY</h3>
+              <h3>V. PRICE AND VALIDITY</h3>
               <ul>
-                <li>All prices in PHP and VAT-exclusive</li>
-                <li>Offer valid for 30 calendar days from issuance</li>
+                <li>Prices are in Philippine currency and VAT Exclusive</li>
+                <li>This offer is valid for 30 calendar days from the date of issuance.</li>
               </ul>
 
               <p style={{ marginTop: '40px' }}>
+                Please sign on the space provided below to indicate your concurrence to the foregoing.
+              </p>
+              <p>
                 ________________________________<br />
                 Authorized Signature
+              </p>
+              <p>
+                ________________________________<br />
+                Date Signed
               </p>
             </div>
           </div>

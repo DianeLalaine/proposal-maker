@@ -97,7 +97,7 @@
   margin-bottom: 20px;
 }
 
-.costing-table {
+.costing-table.full-layout {
   width: 100%;
   border-collapse: collapse;
   margin-top: 15px;
@@ -105,20 +105,36 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.costing-table th,
-.costing-table td {
+.costing-table.full-layout th,
+.costing-table.full-layout td {
   border: 1px solid #ccc;
   padding: 10px 12px;
-  text-align: left;
   vertical-align: top;
+  text-align: left;
 }
 
-.costing-table th {
+.costing-table.full-layout th:nth-child(2),
+.costing-table.full-layout td:nth-child(2) {
+  width: 40%;
+  text-align: right;
+}
+
+.costing-table .subscription-title {
   background-color: #0056b3;
   color: white;
-  text-align: center;
   font-weight: bold;
+  text-align: center;
+  padding: 10px;
 }
+
+.costing-table .note-row {
+  font-style: italic;
+  font-size: 11pt;
+  padding-top: 10px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
 
 .note-row {
   font-style: italic;

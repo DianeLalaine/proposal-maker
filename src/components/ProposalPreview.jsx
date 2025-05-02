@@ -87,17 +87,17 @@ const ProposalPreview = (props) => {
             <div className="page-content">
               <div className="body-content">
                 <p><strong>I. COSTING</strong></p>
-                <table className="costing-table">
+                <table className="costing-table full-layout">
                   <thead>
                     <tr>
-                      <th colSpan="2">{typeOfSubscription}</th>
+                      <th colSpan="2" className="subscription-title">{typeOfSubscription}</th>
+                    </tr>
+                    <tr>
+                      <th>SERVER SPECS</th>
+                      <th>RATE PER STUDENT</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td><strong>SERVER SPECS</strong></td>
-                      <td><strong>RATE PER STUDENT</strong></td>
-                    </tr>
                     <tr>
                       <td>{specs}</td>
                       <td>₱{ratePerStudent.toLocaleString(undefined, { minimumFractionDigits: 2 })}</td>

@@ -4,12 +4,10 @@
   height: 100%;
   overflow-y: scroll;
 
-  /* For Firefox */
   scrollbar-width: thin;
   scrollbar-color: #eaeaea transparent;
 }
 
-/* For Chrome, Edge, Safari */
 .details-container::-webkit-scrollbar {
   width: 8px;
 }
@@ -19,6 +17,6 @@
 }
 
 .details-container::-webkit-scrollbar-thumb {
-  background-color: #eaeaea;  /* Lightest gray */
+  background-color: #eaeaea;
   border-radius: 4px;
 }

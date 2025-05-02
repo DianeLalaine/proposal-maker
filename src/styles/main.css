@@ -100,6 +100,8 @@ body {
   position: relative;
   overflow: hidden;
 }
+
+
 /* Proposal Preview Styles */
 .proposal {
   max-width: 800px;
@@ -159,6 +161,8 @@ body {
   width: 45%;
   text-align: center;
 }
+
+
 /* Section and Form Styles */
 .section {
   background-color: white;
@@ -378,6 +382,8 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+
 /* Tab System */
 .tabs {
   display: flex;
@@ -409,6 +415,8 @@ body {
 .tab-content.active {
   display: block;
 }
+
+
 /* Toggle Switch */
 .switch {
   position: relative;
@@ -449,6 +457,8 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(26px);
 }
+
+
 /* Responsive */
 @media (max-width: 992px) {
   .main-content {
@@ -479,6 +489,8 @@ input:checked + .slider:before {
     gap: 0;
   }
 }
+
+
 /* Template Variations */
 .template-modern .proposal-title {
   color: #3a86ff;

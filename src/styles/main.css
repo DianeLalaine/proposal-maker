@@ -10,9 +10,10 @@
   --success-color: #38b000;
   --warning-color: #ffb700;
   --danger-color: #d90429;
-  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-content: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --font-main: 'Poppins', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-content: 'Poppins', sans-serif;
 }
 * {
   margin: 0;
@@ -125,7 +126,7 @@ body {
 .proposal-client h3 {
   font-size: 18px;
   margin-bottom: 10px;
-  color: var(--primary-color);
+  color: #212529;
 }
 .proposal-section h3,
 .proposal-terms h3 {
@@ -133,7 +134,7 @@ body {
   padding-bottom: 8px;
   margin-bottom: 15px;
   border-bottom: 1px solid var(--light-gray);
-  color: var(--primary-color);
+  color: #212529;
 }
 .service-table {
   width: 100%;
@@ -167,12 +168,13 @@ body {
   margin-bottom: 20px;
 }
 .section h3 {
-  color: var(--primary-color);
   margin-bottom: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #212529 !important;
 }
+
 .form-group {
   margin-bottom: 15px;
 }
@@ -207,6 +209,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  font-family: 'Poppins', sans-serif;
 }
 .btn:hover {
   background-color: var(--secondary-color);
@@ -218,10 +221,10 @@ body {
   background-color: var(--dark-gray);
 }
 .btn-success {
-  background-color: var(--success-color);
+  background-color: #4778ca;
 }
 .btn-success:hover {
-  background-color: #2d9300;
+  background-color: #fabc2a;
 }
 .btn-sm {
   padding: 5px 10px;
@@ -254,7 +257,7 @@ body {
 .navbar ul li a:hover,
 .navbar ul li a.active {
   background-color: var(--light-gray);
-  color: var(--primary-color);
+  color: #094dbe;
 }
 .navbar ul li a i {
   width: 20px;
@@ -519,4 +522,18 @@ input:checked + .slider:before {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.logo-image {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.poppins-bold-italic {
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-weight: 800; 
+  color: #094dbe;
 }

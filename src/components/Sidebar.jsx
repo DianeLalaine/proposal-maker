@@ -1,24 +1,22 @@
 import '../styles/main.css';
 import React from 'react';
 import { FaFileContract, FaPaintBrush, FaInfoCircle, FaConciergeBell, FaFileSignature, FaSlidersH } from 'react-icons/fa';
+import { MdDesignServices } from "react-icons/md";
+import sidebarLogo from '../styles/sidebar-logo.jpg';
 
 const Sidebar = ({ activeTab, setActiveTab }) => {
   return (
     <div className="sidebar">
       <div className="navbar">
-        <div className="logo">
-          <FaFileContract style={{ color: '#f72585' }} />
-          <span>ProposalMaker</span>
-        </div>
+      <div className="logo">
+        <img src={sidebarLogo} className="logo-image" />
+      </div>
         <ul>
-          {/* Temporarily hidden Template tab */}
-          {/*
           <li>
             <a onClick={() => setActiveTab('template')} className={activeTab === 'template' ? 'active' : ''}>
               <FaPaintBrush /> Template
             </a>
           </li>
-          */}
           <li>
             <a onClick={() => setActiveTab('details')} className={activeTab === 'details' ? 'active' : ''}>
               <FaInfoCircle /> Details
@@ -26,7 +24,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
           </li>
           <li>
             <a onClick={() => setActiveTab('services')} className={activeTab === 'services' ? 'active' : ''}>
-              <FaConciergeBell /> Services
+              <MdDesignServices /> Services
             </a>
           </li>
           <li>

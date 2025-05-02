@@ -22,14 +22,6 @@ const TemplatePage = () => {
         >
           <img src="/template-bg.png" alt="Styled Template" />
         </div>
-
-        {/* Plain White Template */}
-        <div
-          className={`template-option ${selectedTemplate === 'template-plain' ? 'active' : ''}`}
-          onClick={() => setSelectedTemplate('template-plain')}
-        >
-          <img src="https://via.placeholder.com/300x200?text=Plain+White" alt="Plain Template" />
-        </div>
       </div>
     </div>
   );

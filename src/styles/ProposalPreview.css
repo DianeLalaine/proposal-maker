@@ -93,11 +93,11 @@
 
 .body-content {
   text-align: justify;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .body-content p {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .costing-table.full-layout {

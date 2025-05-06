@@ -178,11 +178,11 @@ const ProposalPreview = (props) => {
                 <div className="signature-row">
                   <div>
                     ________________________________<br />
-                    Authorized Signature
+                    <strong>Authorized Signature</strong>
                   </div>
                   <div>
                     ________________________________<br />
-                    Date Signed
+                    <strong>Date Signed</strong>
                   </div>
                 </div>
               </div>

@@ -37,18 +37,25 @@
   width: 794px;
 }
 
+.export-mode .proposal-wrapper {
+  transform: none !important;
+}
+
 .proposal-a4 {
   width: 794px;
   height: 1123px;
+  padding: 40px;
   position: relative;
   background: white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
+  font-size: 12pt;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .background-image {
-  background-image: url('C:/Users/Dayan/Desktop/PrinceTech Project/proposal-maker/src/styles/template-bg.png');
+  background-image: url('./template-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -65,10 +72,6 @@
   font-size: 12pt;
   color: #000;
   line-height: 1.5;
-}
-
-.page-break {
-  page-break-after: always;
 }
 
 .top-row {
@@ -128,15 +131,6 @@
 }
 
 .costing-table .note-row {
-  font-style: italic;
-  font-size: 11pt;
-  padding-top: 10px;
-  background-color: #f5f5f5;
-  text-align: center;
-}
-
-
-.note-row {
   font-style: italic;
   font-size: 11pt;
   padding-top: 10px;

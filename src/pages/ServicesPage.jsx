@@ -114,7 +114,6 @@ EBS-optimized by default at no additional cost`,
   }
 };
 
-
 const ServicesPage = ({ details, setDetails }) => {
   const [type, setType] = useState('Subscription');
   const [population, setPopulation] = useState(1000);
@@ -123,12 +122,16 @@ const ServicesPage = ({ details, setDetails }) => {
 
   useEffect(() => {
     const selected = pricingData[type][population];
+    const otc = type === 'Subscription' ? selected.otc : selected.perpetualPrice;
+    const ratePerStudent = type === 'Subscription' ? selected.rate : 0;
+
     setDetails(prev => ({
       ...prev,
       typeOfSubscription: type === 'Subscription' ? 'PRIISMS Online Subscription' : 'PRIISMS PERPETUAL LICENSE',
       specs: selected.specs,
-      ratePerStudent: selected.rate || 0,
-      otc: selected.otc || 0,
+      studentCount: population,
+      ratePerStudent,
+      otc,
       vat: 0.12,
       multiCampus,
       reseller
@@ -184,7 +187,7 @@ const ServicesPage = ({ details, setDetails }) => {
             <p><strong>One-Time Cost (OTC):</strong> ₱{details.otc.toLocaleString()}</p>
           </>
         ) : (
-          <p><strong>Perpetual License Cost:</strong> ₱{pricingData[type][population].perpetualPrice.toLocaleString(undefined, { minimumFractionDigits: 2 })}</p>
+          <p><strong>Perpetual License Cost:</strong> ₱{details.otc.toLocaleString(undefined, { minimumFractionDigits: 2 })}</p>
         )}
         <p><strong>Multiple Campus?</strong> {multiCampus}</p>
         <p><strong>Reseller?</strong> {reseller}</p>

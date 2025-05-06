@@ -63,14 +63,13 @@ b) We have a powerful support system, working with our professionally trained an
         paymentTerms: `<strong>II. TERMS OF PAYMENT</strong><br>
 SOFTWARE AS A SERVICE (SaaS)<br>
 1. Pay the initial payment (One Time Cost/s)<br>
-2. Payment of Subscription Fee (Actual number of enrolled students)<br>
-3. Billing and payment Monthly`,
+2. Monthly billing of Subscription Fee (Based on number of users)`,
 
         delivery: `<strong>III. DELIVERY</strong><br>
 30 TO 60 DAYS upon sign up of this agreement and proof of payment of Total Initial Payment.`,
 
         warranty: `<strong>IV. WARRANTY</strong><br>
-1. Three (3) years lock in period with Automatic Renewal contract for SaaS (Subscription)<br>
+1. Three (3) years lock-in period with Automatic Subscription Renewal contract<br>
 2. Standard Service Warranty and After Sales Support within the contract term.<br>
 3. Lifetime warranty on bugs and fixes after installation of software components<br>
 4. 99.9% uptime on cloud services`,

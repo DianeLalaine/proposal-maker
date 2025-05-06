@@ -44,7 +44,7 @@
 .proposal-a4 {
   width: 794px;
   height: 1123px;
-  padding: 40px;
+  padding: 10px;
   position: relative;
   background: white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -103,7 +103,7 @@
 .costing-table.full-layout {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 15px;
+  margin-top: 5px;
   font-size: 12pt;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -111,7 +111,7 @@
 .costing-table.full-layout th,
 .costing-table.full-layout td {
   border: 1px solid #ccc;
-  padding: 10px 12px;
+  padding: 5px 7px;
   vertical-align: top;
   text-align: left;
 }
@@ -127,13 +127,13 @@
   color: white;
   font-weight: bold;
   text-align: center;
-  padding: 10px;
+  padding: 0px;
 }
 
 .costing-table .note-row {
   font-style: italic;
-  font-size: 11pt;
-  padding-top: 10px;
+  font-size: 12pt;
+  padding-top: 0px;
   background-color: #f5f5f5;
   text-align: center;
 }

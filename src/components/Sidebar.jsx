@@ -32,11 +32,6 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
               <FaFileSignature /> Terms
             </a>
           </li>
-          <li>
-            <a onClick={() => setActiveTab('customize')} className={activeTab === 'customize' ? 'active' : ''}>
-              <FaSlidersH /> Customize
-            </a>
-          </li>
         </ul>
       </div>
     </div>
